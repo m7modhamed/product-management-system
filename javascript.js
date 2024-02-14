@@ -42,19 +42,19 @@ submit.onclick = function () {
     category: category.value.toLowerCase(),
   };
   if(title.value != '' && price.value != '' && category.value != ''){
-  if (mode == "create") { 
-    if (newPro.count > 1) {
-      for (let i = 0; i < newPro.count; i++) {
+    if (mode == "create") { 
+      if (newPro.count > 1) {
+        for (let i = 0; i < newPro.count; i++) {
+          dataPro.push(newPro);
+        }
+      } else {
         dataPro.push(newPro);
       }
-    } else {
-      dataPro.push(newPro);
+    } else if(mode == "update") {
+      dataPro[temp] = newPro;
+      mode = "create";
     }
-  } else {
-    dataPro[temp] = newPro;
-    mode = "create";
-  }
-  clearData();
+    clearData();
 }
 
   localStorage.setItem("product", JSON.stringify(dataPro));

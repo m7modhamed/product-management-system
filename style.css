@@ -3,16 +3,22 @@
     padding: 0;
 }
 body{
-    background-color: #222;
+    background-color: #141963;
     color: #fff;
     font-family: system-ui, sans-serif;
     font-weight: 700;
 }
 
 .crud{
-    width: 80%;
+    width: 70%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 
 .head{
     text-align: center;
@@ -20,23 +26,33 @@ body{
     margin: 10px 0;
 }
 
-
+.inputs{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
 input{
     width: 100%;
     height: 25px;
     outline: none;
     border: none;
-    background-color: #111;
+    background-color: #24018c;
     margin: 4px 0;
     border-radius: 4px;
     padding: 4px;
     color: #fff;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 input:focus{
-    background-color: #000;
-    transform: scale(1.1);
-    margin: 15px 0;
+    background-color: #fff;
+    transform: scale(1.08);
+    margin: 15px 15px;
+    color: black;
+    
 }
 
 .price{
@@ -79,6 +95,10 @@ button:hover{
 
 .outputs{
     margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
 }
 .btnSearch{
     display: flex;
@@ -100,10 +120,25 @@ button:hover{
 }
 
 table{
-    width: 100%;
     text-align: center;
     margin: 10px 0;
+    width: 100%;
 }
+
+@media screen and (max-width:1040px) {
+   table{
+    font-size: 10px;
+    padding: 0;
+    
+   }
+   input{
+    font-size: 12px;
+   }
+   input:focus{
+    margin: 2px 0;
+   }
+}
+
 table th{
   text-transform: uppercase;
   font-weight: 900;
